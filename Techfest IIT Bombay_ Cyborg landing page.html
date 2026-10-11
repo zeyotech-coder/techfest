@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Techfest IIT Bombay | Become the upgrade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1319;--panel:#151d26;--line:#2a3643;--steel:#9fb0be;--text:#e8eef3;--accent:#ff5a2c;--on-accent:#190a04;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef1f4;--panel:#fff;--line:#c5ced6;--steel:#4d5b68;--text:#121a22;--accent:#d63e0c;--on-accent:#fff}}
+:root[data-theme="light"]{--bg:#eef1f4;--panel:#fff;--line:#c5ced6;--steel:#4d5b68;--text:#121a22;--accent:#d63e0c;--on-accent:#fff}
+:root[data-theme="dark"]{--bg:#0d1319;--panel:#151d26;--line:#2a3643;--steel:#9fb0be;--text:#e8eef3;--accent:#ff5a2c;--on-accent:#190a04}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.6 "IBM Plex Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Chakra Petch",system-ui,sans-serif;line-height:1.05;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:700 1.25rem "Chakra Petch",sans-serif;text-decoration:none;display:flex;gap:10px;align-items:center}
+.logo i{width:14px;height:14px;background:var(--accent);display:block;clip-path:polygon(0 0,100% 0,100% 60%,60% 100%,0 100%)}
+nav{display:flex;gap:26px;font-size:.95rem}
+nav a{text-decoration:none;color:var(--steel)}nav a:hover{color:var(--text)}
+.btn{display:inline-block;font:700 1rem "Chakra Petch",sans-serif;padding:13px 24px;background:var(--accent);color:var(--on-accent);text-decoration:none;border:0;cursor:pointer;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--line);clip-path:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:clamp(40px,8vw,96px) 0}
+h1{font-size:clamp(3rem,8.4vw,6.6rem);font-weight:700}
+h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--steel)}
+.lead{max-width:46ch;color:var(--steel);margin:26px 0 30px;font-size:1.15rem}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.readout{margin:38px 0 0;padding:14px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,auto);gap:8px 28px;justify-content:start;font-size:.92rem}
+.readout dt{color:var(--steel)}.readout dd{margin:0;font-weight:500}
+.readout .on{color:var(--accent)}
+.eyebox{position:relative;max-width:460px;width:100%;margin-inline:auto}
+#eye{width:100%;height:auto;display:block}
+.r1{animation:spin 40s linear infinite}.r2{animation:spin 26s linear infinite reverse}
+.r1,.r2{transform-origin:0 0}
+@keyframes spin{to{transform:rotate(360deg)}}
+#track{text-align:center;color:var(--steel);font-size:.85rem;margin:4px 0 0;font-variant-numeric:tabular-nums}
+section{padding:clamp(56px,9vw,110px) 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(2rem,4.8vw,3.4rem);max-width:18ch}
+.sub{color:var(--steel);max-width:52ch;margin:16px 0 0}
+.mods{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);margin-top:48px;align-items:center}
+#bust{width:100%;max-width:380px;margin-inline:auto;display:block;overflow:visible}
+.node{cursor:pointer}
+.node circle.d{fill:var(--panel);stroke:var(--steel);stroke-width:1.5;transition:.2s}
+.node circle.h{fill:none;stroke:var(--accent);stroke-width:1.5;opacity:0}
+.node.on circle.d{fill:var(--accent);stroke:var(--accent)}
+.node.on circle.h{opacity:1;animation:ping 1.8s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes ping{from{transform:scale(1);opacity:.9}to{transform:scale(2.2);opacity:0}}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tabs button{font:500 .95rem "IBM Plex Sans",sans-serif;color:var(--steel);background:transparent;border:1px solid var(--line);padding:9px 16px;cursor:pointer;transition:.15s}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.panel{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);padding:clamp(22px,3vw,36px)}
+.panel h3{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px}
+.panel p{margin:0 0 18px;color:var(--steel)}
+.panel ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.panel li{border:1px solid var(--line);padding:5px 12px;font-size:.9rem}
+.rows{margin-top:44px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr) auto;gap:20px 40px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:clamp(1.8rem,3.6vw,2.6rem)}
+.row p{margin:0;color:var(--steel);max-width:48ch}
+footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--steel);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:860px){
+ nav{display:none}
+ .hero,.mods{grid-template-columns:1fr}
+ .eyebox{max-width:320px}
+ .row{grid-template-columns:1fr;gap:12px}
+ .row .btn{justify-self:start;margin-top:6px}
+ .readout{grid-template-columns:repeat(2,auto)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+ <a class="logo" href="#top"><i></i>Techfest IIT Bombay</a>
+ <nav aria-label="Main"><a href="#modules">Modules</a><a href="#join">Join</a><a href="https://techfest.org">techfest.org</a></nav>
+ <a class="btn" href="#join" style="padding:9px 18px">Register</a>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+ <div>
+  <h1>Become the <span>upgrade.</span></h1>
+  <p class="lead">Asia's largest science and technology festival comes to IIT Bombay. Build robots, break code, hear from the people shaping what's next, and leave a better version of yourself.</p>
+  <div class="cta"><a class="btn" href="#join">Register now</a><a class="btn ghost" href="#modules">Explore the modules</a></div>
+  <dl class="readout">
+   <div><dt>Venue</dt><dd>IIT Bombay, Powai</dd></div>
+   <div><dt>Dates</dt><dd>Announced soon</dd></div>
+   <div><dt>Status</dt><dd class="on">Systems online</dd></div>
+  </dl>
+ </div>
+ <div class="eyebox">
+  <svg id="eye" viewBox="-200 -200 400 400" role="img" aria-label="A cybernetic eye that follows your cursor">
+   <defs><radialGradient id="ir"><stop offset="0" style="stop-color:var(--accent)"/><stop offset=".6" style="stop-color:var(--accent);stop-opacity:.55"/><stop offset="1" style="stop-color:var(--accent);stop-opacity:.15"/></radialGradient></defs>
+   <circle r="190" fill="none" stroke="var(--line)"/>
+   <g class="r1"><circle r="180" fill="none" stroke="var(--steel)" stroke-width="3" stroke-dasharray="2 14"/><path d="M-180 0h-14M180 0h14M0-180v-14M0 180v14" stroke="var(--accent)" stroke-width="3"/></g>
+   <g class="r2"><circle r="152" fill="none" stroke="var(--steel)" stroke-width="1.5" stroke-dasharray="70 22 12 22"/></g>
+   <circle r="124" fill="var(--panel)" stroke="var(--line)" stroke-width="2"/>
+   <path d="M-124 0h248M0-124v248" stroke="var(--line)"/>
+   <g id="iris"><circle r="76" fill="url(#ir)" stroke="var(--accent)" stroke-width="2"/>
+    <circle r="58" fill="none" stroke="var(--bg)" stroke-width="1.5" stroke-dasharray="3 6" opacity=".7"/>
+    <circle r="27" fill="var(--bg)"/><circle cx="-11" cy="-13" r="7" fill="#fff" opacity=".85"/></g>
+   <path d="M-170-140v-30h30M170-140v-30h-30M-170 140v30h30M170 140v30h-30" fill="none" stroke="var(--accent)" stroke-width="3" transform="scale(1.1)"/>
+  </svg>
+  <p id="track" aria-hidden="true">Tracking you: 0, 0</p>
+ </div>
+</div>
+
+<section id="modules"><div class="wrap">
+ <h2>Five systems. One festival.</h2>
+ <p class="sub">Pick a module to see what's inside. Each one plugs into a different part of the machine.</p>
+ <div class="mods">
+  <svg id="bust" viewBox="0 0 320 340" aria-hidden="true">
+   <defs><pattern id="gr" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="var(--accent)" stroke-opacity=".45"/></pattern></defs>
+   <path d="M30 340C40 250 100 228 160 228s120 22 130 112" fill="var(--panel)" stroke="var(--steel)" stroke-width="1.5"/>
+   <path d="M160 228C220 228 280 250 290 340H160z" fill="url(#gr)"/>
+   <path d="M130 190v38M190 190v38" stroke="var(--steel)" stroke-width="1.5"/>
+   <ellipse cx="160" cy="112" rx="62" ry="78" fill="var(--panel)" stroke="var(--steel)" stroke-width="1.5"/>
+   <path d="M160 34a62 78 0 0 1 0 156z" fill="url(#gr)"/>
+   <path d="M160 34v156" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 4"/>
+   <path d="M118 104q16-8 30 0" fill="none" stroke="var(--steel)" stroke-width="2"/>
+   <g class="node" data-i="0"><circle class="h" cx="186" cy="104" r="9"/><circle class="d" cx="186" cy="104" r="9"/></g>
+   <g class="node" data-i="1"><circle class="h" cx="262" cy="288" r="9"/><circle class="d" cx="262" cy="288" r="9"/></g>
+   <g class="node" data-i="2"><circle class="h" cx="160" cy="132" r="9" transform="translate(0 0)"/><circle class="d" cx="160" cy="150" r="9"/></g>
+   <g class="node" data-i="3"><circle class="h" cx="160" cy="212" r="9"/><circle class="d" cx="160" cy="212" r="9"/></g>
+   <g class="node" data-i="4"><circle class="h" cx="112" cy="288" r="9"/><circle class="d" cx="112" cy="288" r="9"/></g>
+  </svg>
+  <div>
+   <div class="tabs" role="tablist" aria-label="Festival modules"></div>
+   <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+  </div>
+ </div>
+</div></section>
+
+<section id="join"><div class="wrap">
+ <h2>Plug in your way.</h2>
+ <div class="rows">
+  <div class="row"><h3>Compete</h3><p>Enter robotics, coding and design challenges, alone or with a team, and test your build against the best in the country.</p><a class="btn" href="https://techfest.org">Register to compete</a></div>
+  <div class="row"><h3>Attend</h3><p>Walk the exhibitions, sit in on lectures and try workshops. No team needed, just curiosity.</p><a class="btn ghost" href="https://techfest.org">Get your pass</a></div>
+  <div class="row"><h3>Partner</h3><p>Back the festival, run a challenge, or put your product in front of thousands of student builders.</p><a class="btn ghost" href="https://techfest.org">Talk to the team</a></div>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>Techfest, the science and technology festival of IIT Bombay, Powai, Mumbai.</span><a href="https://techfest.org">techfest.org</a></div></footer>
+
+<script>
+(function(){
+var M=[
+ {t:"Optics",h:"AI and vision",p:"Teach machines to see, read and decide. Compete on real datasets and learn from practitioners.",c:["Machine learning","Computer vision","Data challenges"]},
+ {t:"Limbs",h:"Robotics",p:"Build it, wire it, drive it. Combat bots, autonomous machines and drone challenges, tested live in the arena.",c:["Robot combat","Autonomous bots","Drones"]},
+ {t:"Core",h:"Code and hackathons",p:"Ship working software against the clock. Form a team, pick a problem and build something that runs.",c:["Hackathons","Competitive coding","Product builds"]},
+ {t:"Nerve",h:"Lectures and talks",p:"Hear scientists, founders and engineers explain what they are building and why it matters.",c:["Guest lectures","Panels","Q&A"]},
+ {t:"Pulse",h:"Exhibitions and startups",p:"Get close to live demos, prototypes and student startups, and try the machines yourself.",c:["Live demos","Prototypes","Startup showcase"]}
+];
+var tabs=document.querySelector(".tabs"),panel=document.getElementById("panel"),nodes=document.querySelectorAll(".node");
+M.forEach(function(m,i){var b=document.createElement("button");b.role="tab";b.textContent=m.t;b.onclick=function(){set(i)};tabs.appendChild(b)});
+function set(i){var m=M[i];
+ [].forEach.call(tabs.children,function(b,j){b.setAttribute("aria-selected",j===i)});
+ nodes.forEach(function(n){n.classList.toggle("on",+n.dataset.i===i)});
+ panel.innerHTML="<h3>"+m.h+"</h3><p>"+m.p+"</p><ul>"+m.c.map(function(x){return"<li>"+x+"</li>"}).join("")+"</ul>"}
+nodes.forEach(function(n){n.onclick=function(){set(+n.dataset.i)}});
+set(0);
+var eye=document.getElementById("eye"),iris=document.getElementById("iris"),tr=document.getElementById("track");
+function look(x,y){var r=eye.getBoundingClientRect(),dx=x-(r.left+r.width/2),dy=y-(r.top+r.height/2),d=Math.hypot(dx,dy)||1,m=Math.min(d/7,44);
+ iris.setAttribute("transform","translate("+(dx/d*m).toFixed(1)+" "+(dy/d*m).toFixed(1)+")");
+ tr.textContent="Tracking you: "+Math.round(x)+", "+Math.round(y)}
+addEventListener("pointermove",function(e){look(e.clientX,e.clientY)});
+})();
+</script>
+</body>
+</html>
